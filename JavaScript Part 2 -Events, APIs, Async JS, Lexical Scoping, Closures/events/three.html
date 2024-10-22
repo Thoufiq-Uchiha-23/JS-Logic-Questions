@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS Projects</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = function () {
+      console.log("Thoufiq the Hero", Date.now());
+    };
+    const intervalId = setInterval(sayDate, 1000);
+    // document.querySelector("#start").addEventListener("click", function () {
+    //   setInterval(sayDate, 1000);
+    //   console.log("STARTED");
+    // });
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearInterval(intervalId);
+      console.log("STOPPED");
+    });
+  </script>
+</html>
