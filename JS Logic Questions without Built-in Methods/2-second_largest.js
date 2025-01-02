@@ -30,3 +30,30 @@ console.log(findSecondLargest([50, 50, 50]));          // Output: null
 console.log(findSecondLargest([-10, -20, -5, -30]));   // Output: -10
 console.log(findSecondLargest([5]));                   // Output: null
 console.log(findSecondLargest([100, 90, 90, 80]));     // Output: 90
+
+// PRACTICE
+function secondlargest(arr) {
+    if(arr.length < 2){
+        return null;
+    }
+
+    let largest = -Infinity;
+    let secondlargest = -Infinity;
+    for(let i=0; i < arr.length ; i++){
+        if(arr[i] > largest){
+            secondlargest = largest;
+            largest = arr[i];
+        } else if(arr[i] > secondlargest && arr[i] !== largest){
+            secondlargest = arr[i]
+        }
+    }
+    return secondlargest;
+
+}
+
+console.log(secondlargest([1,2,3,4,5,6,7,8,9,10]))
+console.log(secondlargest([10, 20, 30, 40, 50]));  // Output: 40
+console.log(secondlargest([50, 50, 50]));          // Output: null
+console.log(secondlargest([-10, -20, -5, -30]));   // Output: -10
+console.log(secondlargest([5]));                   // Output: null
+console.log(secondlargest([100, 90, 90, 80]));
