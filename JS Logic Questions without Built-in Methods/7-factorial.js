@@ -44,3 +44,40 @@ console.log(factorialRecursive(5));  // Output: 120
 console.log(factorialRecursive(0));  // Output: 1 (by definition)
 console.log(factorialRecursive(10)); // Output: 3628800
 console.log(factorialRecursive(-3)); // Output: "Factorial is not defined for negative numbers."
+
+console.log("PRACTICE")
+
+console.log("Factorial Iteration")
+
+function factorial(n) {
+    if(n < 0){
+        return "Factorial is not defined for negative numbers"
+    }
+
+
+    let result = 1;
+
+    for(let i = 1; i <=n ; i++){
+        result *= i;
+    }
+
+    return result;
+}
+
+console.log(factorial(5))
+
+console.log("Factorial Recursion")
+
+function factrec(n) {
+    if(n < 0) {
+        return "Factorial is not defined for negative numbers"
+    }
+
+    if(n===0){
+        return 1;
+    }
+
+    return n * factrec(n-1);
+}
+
+console.log(factrec(5))
