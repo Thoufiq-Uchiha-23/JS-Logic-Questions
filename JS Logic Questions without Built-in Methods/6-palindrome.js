@@ -41,3 +41,39 @@ console.log(isNumberPalindrome(12321));  // Output: true
 console.log(isNumberPalindrome(12345));  // Output: false
 console.log(isNumberPalindrome(1));      // Output: true
 console.log(isNumberPalindrome(10));     // Output: false
+
+
+// PRACTICE
+console.log("String Palindrome")
+
+function strPal(str){
+    let len = str.length;
+
+    for(let i =0; i< len; i++){
+        if(str[i] !== str[len-i-1]){
+            return false;
+        }
+    }
+
+    return true;
+
+}
+
+console.log(strPal("madam"))
+
+console.log("Number Palindrome")
+
+function numPal(num) {
+    let original = num;
+    let reversed = 0;
+
+    while(num > 0){
+        let digit = num %10;
+        reversed = reversed * 10 + digit;
+        num = Math.floor(num/10)
+    }
+
+    return original === reversed;
+}
+
+console.log(numPal(122))
